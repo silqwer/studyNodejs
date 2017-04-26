@@ -21,7 +21,7 @@ var cipheredOutput = cipher.final('base64');
 var decipher = crypto.createDecipher('aes192', key);
 decipher.update(cipheredOutput, 'base64', 'utf8');
 var deciphererdOutput = decipher.final('utf8');
-
+ 
 
 //출력
 console.log('원래문자열:'+input);
