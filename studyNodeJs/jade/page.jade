@@ -1,0 +1,29 @@
+html
+	head
+		title Index Page
+	body
+		//JADE String
+		#header
+			h1 Hello jade .. !
+			h2 #{name}
+		hr
+		.article
+			a(href="http://swprodg.com", data-test="multiple Attribute") Go To Sw Prodg
+		div(id="mydiv" onclick="divClick(this.id);")
+			p(style="color:white;") #{description}
+			p= description
+			-for(var i =0; i<3; ++i){
+			p Go!
+			-}
+		style.
+			#mydiv{
+				background-color : black;
+				width:500px;
+				height:500px;
+				display:block;
+			}
+		script(src="https://code.jquery.com/jquery-1.12.4.js")
+		script.
+			var divClick = function(id){
+				alert('click id:'+id);
+			};
